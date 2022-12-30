@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 100%;
+    }
+    li{
+        list-style-type: none;
+
+    }
+    a{
+        text-decoration: none;
+    }
+    .name{
+        width: 100%;
+        height: 100px;
+        background-color: darkblue;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    .name>ul{
+        width: 80%;
+        height: 100%;
+        border: 1px solid cornsilk;
+        display: flex;
+        
+
+    }
+    .name>ul>li{
+        /*border: 1px solid darkmagenta;*/
+        flex-grow: 1;
+
+    }
+    .name>ul>li>a{
+       /* background-color: aquamarine;*/
+        display: flex;
+        width: 100%;
+        height: 100%;
+        font-size: 35px;
+        justify-content: center;
+        align-items: center;
+        text-transform: capitalize;
+        color: darkgoldenrod;
+        transition: 1s;
+    }
+    .name>ul>li>a:hover{
+        background-color: coral;
+    }
+    /*****submenu****/
+    .name>ul>li:hover>ul{
+        opacity: 1;
+        visibility: visible;
+    }
+    .name>ul>li>ul{
+        width: 100%;
+        height: 300px;
+        background-color: rgb(230, 122, 14);
+        /*display: none;*/
+        position: absolute;
+        top: 100px;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: 1s;
+
+    }
+    .name>ul>li>ul>li{
+          border-bottom: 1px rgb(241, 116, 14);
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+         /* background-color: darkcyan;*/
+
+          
+    }
+    .name>ul>li>ul>li>ul>li{
+        height: 40px;
+
+    }
+    .name>ul>li>ul>li>ul>li>a{
+        font-size: 25px;
+        color: blueviolet;
+    }
+    .name>ul>li>ul>li>a{
+       /* background-color: bisque;*/
+        padding:0 20px;
+        color: rgb(234, 233, 238);
+        padding: 50px;
+
+    }
+    .name>ul>li>ul>li>ul{
+        width: 25%;
+       /* border: 1px solid darkmagenta;*/
+    }
+    </style>
+</head>
+<body>
+    <nav class="name">
+        <ul>
+            <li><a href="">about</a></li>
+            <li><a href="">home</a></li>
+            <li><a href="">manu</a>
+              <ul class="name1">
+                 <li>
+                   <ul>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                   </ul>
+                   <ul>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                   </ul>
+                   <ul>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                   </ul>
+                   <ul>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                    <li><a href="">web home</a></li>
+                   </ul>
+                 </li>
+              </ul>
+            </li>
+            <li><a href="">servises</a></li>
+            <li><a href="">How to pay?</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

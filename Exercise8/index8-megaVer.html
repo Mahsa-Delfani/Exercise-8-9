@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } 
+        li{
+            list-style-type:  none;
+        }
+        a{
+            text-decoration: none;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+        .name{
+            width: 200px;
+            height: 100vh;
+           background-color: blueviolet;
+           
+        } 
+        .name>ul{
+            width: 100%;
+           /* background-color: cornsilk;*/
+           height: 100%;
+
+        }
+        .name>ul>li{
+            width: inherit;
+            height: 60px;
+           /* border: 1px solid darkgrey;*/
+
+        }
+        
+        .name>ul>li>a{
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             width: 100%;
+             height: 100%;
+            /* background-color: blueviolet;*/
+             font-size: 20px;
+             text-transform: uppercase;
+             color: cornflowerblue;
+            /* border-bottom: 1px solid darkorchid;*/
+            border-bottom: 1px solid darkorchid;
+             transition: .4s;
+            
+        } 
+        .name>ul>li:hover>.name1{
+            opacity: 1;
+            visibility: visible;
+        } 
+        .name1{
+            width: calc(100% - 200px);
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 200px;
+            background-color: blue;
+            opacity: 0;
+            visibility: hidden;
+            transition: 1s;
+
+        }
+        
+        .name1>li{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-color: rgb(168, 114, 219);
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="name">
+        <ul>
+            <li><a href="">about</a></li>
+            <li><a href="">menu</a></li>
+            <li><a href="">job</a>
+            <ul class="name1">
+                <li></li>    
+            </ul>
+            </li>
+            <li><a href="">gallery</a></li>
+            <li><a href="">social</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

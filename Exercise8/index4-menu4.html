@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 100%;
+    }
+    li{
+        list-style-type: none;
+
+    }
+    a{
+        text-decoration: none;
+    }
+    .name{
+        width: 100%;
+        height: 100px;
+        background-color: darkblue;
+        display: flex;
+        justify-content: center;
+    }
+    .name>ul{
+        width: 80%;
+        height: 100%;
+       /* border: 1px solid cornsilk;*/
+        display: flex;
+    }
+    .name>ul>li{
+        /*border: 1px solid darkmagenta;*/
+        flex-grow: 1;
+
+    }
+    .name>ul>li>a{
+       /* background-color: aquamarine;*/
+        display: flex;
+        width: 100%;
+        height: 100%;
+        font-size: 35px;
+        justify-content: center;
+        align-items: center;
+        text-transform: capitalize;
+        color: darkgoldenrod;
+        transition: 1s;
+    }
+    .name>ul>li>a:hover{
+        background-color: coral;
+    }
+    /*****submenu****/
+    .name>ul>li:hover>ul{
+        height: 300px;
+        
+    }
+    .name>ul>li>ul{
+        background-color: rgb(230, 122, 14);
+        height: 0;
+        transition: 1s;
+        position: relative;
+        
+
+    }
+    .name>ul>li:hover>ul>li{
+        transition: 2s;
+        display: flex;
+
+    }
+    .name>ul>li:hover>ul>li:nth-of-type(1){
+        top: 0;
+
+    }
+    .name>ul>li:hover>ul>li:nth-of-type(2){
+        top: 50px;
+
+    }
+    .name>ul>li:hover>ul>li:nth-of-type(3){
+        top: 100px;
+
+    }
+    .name>ul>li:hover>ul>li:nth-of-type(4){
+        top: 150px;
+
+    }
+    .name>ul>li:hover>ul>li:nth-of-type(5){
+        top: 200px;
+
+    }
+    .name>ul>li:hover>ul>li:nth-of-type(6){
+        top: 250px;
+
+    }
+    
+
+    .name>ul>li>ul>li{
+          height: 50px;
+          border-bottom: 1px rgb(241, 116, 14);
+          display: flex;
+          align-items: center;
+          position: absolute;
+          width: 100%;
+          top: 0;
+          left: 0;
+          display: none;
+          
+    }
+    .name>ul>li>ul>li>a{
+       /* background-color: bisque;*/
+        padding:0 20px;
+        color: rgb(234, 233, 238);
+
+    }
+    .name>ul>li>ul>li>a:hover{
+        background-color: rgb(216, 218, 221);
+        color: chocolate;
+    }
+    .name>ul>li>ul>li:hover>ul{
+        display: flex;
+    }
+
+    
+    .name>ul>li>ul>li>ul{
+        background-color: rgb(40, 11, 126);
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 200px;
+        display: none;
+        flex-wrap: wrap;
+    }
+    .name>ul>li>ul>li>ul>li{
+        height: 50px;
+        width: 100%;
+        border-bottom: 1px solid rgb(18, 5, 131);
+    }
+    .name>ul>li>ul>li>ul>li>a{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        color: rgb(228, 143, 14);
+    }
+    </style>
+</head>
+<body>
+    <nav class="name">
+        <ul>
+            <li><a href="">about</a></li>
+            <li><a href="">home</a></li>
+            <li><a href="">manu</a>
+              <ul>
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a>
+                 <ul>
+                    <li><a href="">submenu1</a></li>
+                    <li><a href="">submenu2</a></li>
+                    <li><a href="">submenu3</a></li>
+                    <li><a href="">submenu4</a></li>
+                 </ul>
+
+                </li>
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+              </ul>
+            </li>
+            <li><a href="">servises</a></li>
+            <li><a href="">How to pay?</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

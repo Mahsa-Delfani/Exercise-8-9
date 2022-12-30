@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } 
+        li{
+            list-style-type:  none;
+        }
+        a{
+            text-decoration: none;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+        .name{
+            width: 200px;
+            height: 100vh;
+           background-color: blueviolet;
+           position: relative;
+        } 
+        .name>ul{
+            width: 100%;
+           /* background-color: cornsilk;*/
+           height: 100%;
+
+        }
+        .name>ul>li{
+            width: inherit;
+            height: 60px;
+            position: relative;
+           /* border: 1px solid darkgrey;*/
+
+        }
+        .name>ul>li::before{
+            content: '';
+            display: block;
+            width: 10px;
+            height: 100%;
+           /* background-color: rgb(123, 126, 11);*/
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 1s;
+        }
+        .name>ul>li:nth-child(1)::before{
+            background-color: rgb(134, 10, 76);
+
+        }
+        .name>ul>li:nth-child(2)::before{
+            background-color: rgb(137, 103, 9);
+            
+        }
+        .name>ul>li:nth-child(3)::before{
+            background-color: rgb(131, 7, 7);
+            
+        }
+        .name>ul>li:nth-child(4)::before{
+            background-color: rgb(111, 129, 10);
+            
+        }
+        .name>ul>li:nth-child(5)::before{
+            background-color: rgb(5, 127, 31);
+            
+        }
+        .name>ul>li>a{
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             width: 100%;
+             height: 100%;
+            /* background-color: blueviolet;*/
+             font-size: 20px;
+             text-transform: uppercase;
+             color: cornflowerblue;
+            /* border-bottom: 1px solid darkorchid;*/
+             transition: .4s;
+             position: relative;
+        }
+        .name>ul>li:hover::before{
+            width: 100%;
+        }
+        .name>ul>li:hover>.name1{
+            left: 100%;
+
+        }
+        .name1{
+            background-color: rgb(180, 16, 245);
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200px;
+            transition: .4s;
+            
+        }
+        .name1>li{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(168, 114, 219);
+            color: black;
+
+        }
+    </style>
+</head>
+<body>
+    <nav class="name">
+        <ul>
+            <li><a href="">about</a></li>
+            <li><a href="">menu</a></li>
+            <li><a href="">job</a>
+            <ul class="name1">
+                <li><a href="">about</a></li>
+                <li><a href="">menu</a></li>
+                <li><a href="">job</a></li>
+                <li><a href="">gallery</a></li>
+            </ul>
+            </li>
+            <li><a href="">gallery</a></li>
+            <li><a href="">social</a></li>
+        </ul>
+    </nav>
+</body>
+<script>
+    document.guerySelector('.name1>ul>li:nth-of-type(3)').addEventlistener
+    ('mouseenter',()=>{
+        setTimeout(() => {
+        document.getElementsByClassName('name1')[0].style.zIndex=5
+    }, 400);
+    })
+    document.guerySelector('.name1>ul>li:nth-of-type(3)').addEventlistener
+    ('mouseenter',()=>{
+        setTimeout(() => {
+        document.getElementsByClassName('name1')[0].style.zIndex=-1
+    });
+    })
+  
+</script>
+</html>

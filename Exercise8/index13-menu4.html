@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     *{
+        margin: 0;
+        padding: 0;
+        box-sizing:border-box;
+     }
+     .name{
+        width: 100%;
+        height: 100px;
+        background-color: rgb(215, 17, 83);
+        display: flex;
+        justify-content: center;
+     }
+     .name>ul{
+        width: 70%;
+        height: 100%;
+       /* border: 2px solid navy;*/
+        display: flex;
+     }
+     .name>ul>li{
+        list-style-type:none ;
+        /*border: 1px solid chartreuse;*/
+        flex-grow: 1;
+     }
+     .name>ul>li>a{
+       /* background-color: blueviolet;*/
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: 1s;
+        position: relative;
+     }
+     .name>ul>li>a::after{
+        content:'';
+        display: block;
+        width: 0;
+        height: 5px;
+        background-color: coral;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transition: 1s;
+
+     }
+     .name>ul>li>a:hover::after{
+        width: 100%;
+        left: 0;
+     }
+     .name>ul>li>a:hover{
+        background-color: rgb(19, 234, 187);
+     }
+    </style>
+</head>
+<body>
+   <nav class="name">
+    <ul>
+        <li><a href="">about</a></li>
+        <li><a href="">phone</a></li>
+        <li><a href="">text</a></li>
+        <li><a href="">file</a></li>
+        <li><a href="">home</a></li>
+    </ul>
+   </nav> 
+</body>
+</html>
